@@ -30,8 +30,8 @@ const composeOrderUrl = (method, id) => {
                 </span>
                 <span v-else>
                   + {{ $t('Payment_fee') }}: {{ payment.ratioRange }}
+                  <span v-if="payment.fixedFeeRange">+{{ payment.fixedFeeRange }}</span>
                 </span>
-                <span v-if="payment.fixedFeeRange">+{{ payment.fixedFeeRange }}</span>
               </p>
               <p v-else class="text-[11px] text-gray-800">
                 + {{ $t('Payment_fee') }}: 0%
